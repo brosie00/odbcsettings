@@ -1,0 +1,8 @@
+unixODBC 2.3.11
+DRIVERS............: /etc/odbcinst.ini
+SYSTEM DATA SOURCES: /etc/odbc.ini
+FILE DATA SOURCES..: /etc/ODBCDataSources
+USER DATA SOURCES..: /home/brett/.odbc.ini
+SQLULEN Size.......: 8
+SQLLEN Size........: 8
+SQLSETPOSIROW Size.: 8
