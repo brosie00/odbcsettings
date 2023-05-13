@@ -1,3 +1,3 @@
 # odbcsettings
 
-hello
+hello goodbye
