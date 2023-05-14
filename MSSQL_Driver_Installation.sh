@@ -1,19 +1,22 @@
-Troubleshooting connection problems
-If you're unable to make a connection to SQL Server using the ODBC driver, use the following information to identify the problem.
+# Troubleshooting connection problems
+# If you're unable to make a connection to SQL Server using the ODBC driver, use the following information to identify the problem.
 
-The most common connection problem is to have two copies of the UnixODBC driver manager installed. Search /usr for libodbc*.so*. If you see more than one version of the file, you (possibly) have more than one driver manager installed. Your application might use the wrong version.
+# The most common connection problem is to have two copies of the UnixODBC driver manager installed. Search /usr for libodbc*.so*. If you see more than one version of the file, you (possibly) have more than one driver manager installed. Your application might use the wrong version.
 
-Enable the connection log by editing your /etc/odbcinst.ini file to contain the following section with these items:
+# Enable the connection log by editing your /etc/odbcinst.ini file to contain the following section with these items:
 
-ini
+# ini
 
-Copy
-[ODBC]
-Trace = Yes
-TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
+# Copy
+# [ODBC]
+# Trace = Yes
+# TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
 
-sudo su
+# sudo su
 
+sudo ACCEPT_EULA=Y yum install -y msodbcsql18
+sudo ACCEPT_EULA=Y yum install -y msodbcsql17
+sudo ACCEPT_EULA=Y yum install -y msodbcsql
 
 
 ############################
